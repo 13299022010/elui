@@ -1,0 +1,119 @@
+html,body{
+    margin: 0;
+    padding: 0;
+}
+.btn-group{
+    margin: 10px auto;
+    width: 500px;
+    height: 100px;
+    box-shadow:0 0 1px 1px #ccc;
+    border-radius: 5px;
+    padding: 10px;
+}
+.btn-group h3{
+    margin: 5px 0 15px 0;
+}
+
+.btn-group .btn{
+    background-color: #409eff;
+    border: 1px solid #dcdfe6;
+    font-size: 13px;
+    padding: 3px 5px;
+    border-radius: 5px;
+    margin-top: 15px;
+    display: inline-block;
+    cursor: pointer;
+}
+.dialog-bg.in-sight{
+    opacity: 0.6;
+}
+.dialog-bg.show{
+    display: block;
+}
+.dialog-bg{
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: #666;
+    opacity: 0;
+    display: none;
+    transition: all .5s;
+}
+.dialog.in-sight{
+    top:40%;
+    opacity: 1;
+}
+.dialog.show{
+    display: block;
+}
+.dialog{
+    position: absolute;
+    top: -50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    width: 60vw;
+    background-color: #fff;
+    opacity: 0;
+    box-shadow:0 0 1px 1px #bbb;
+    border-radius: 3px;
+    display: none;
+    transition: all .5s;
+}
+.dialog>header{
+    font-size: 18px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+.dialog>header>span{
+    padding: 5px 10px;
+}
+.dialog-close{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 4px;
+    cursor: pointer;
+    margin-right: 5px;
+}
+.dialog-close::before,
+.dialog-close::after{
+    content: '';
+    display: block;
+    position: absolute;
+    width: 10px;
+    height: 1px;
+    background-color: #666;
+    transform: rotate(45deg);
+}
+.dialog-close::after{
+    transform: rotate(-45deg);
+}
+.dialog>main{
+    min-height: 50px;
+    padding: 10px;
+}
+.dialog>footer{
+    height: 33px;
+    display: flex;
+    justify-content: space-evenly;
+    padding-bottom: 10px;
+    vertical-align: bottom;
+}
+.dialog>footer>span{
+    border-radius: 3px;
+    border: 1px solid #dcdfe6;
+    padding: 5px 15px;
+    font-size: 14px;
+    align-self: start;
+    color: #606266;
+    cursor: pointer;
+}
+.dialog>footer>.confirm-btn{
+    background-color: #409eff;
+    color: white;
+}
+
+

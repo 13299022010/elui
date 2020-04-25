@@ -1,0 +1,118 @@
+.carousel{
+    margin: 20px auto;
+    width: 40vw;
+    min-width: 340px;
+    border-radius: 10px;
+    padding: 10px 20px;
+    box-shadow: 0 0 4px 0 #dcdfe6;
+}
+.carousel>main{
+    position: relative;
+    height: 300px;
+}
+.pages{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+}
+.page{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    z-index: -1;
+    cursor: auto;
+    transition: ease-in-out .5s;
+}
+.page>img{
+    width: 100%;
+    height: 100%;
+}
+.page.show{
+    z-index: 10;
+    opacity: 1;
+}
+
+.left-btn,
+.right-btn{
+    border: 1px solid #fff;
+    width: 20px;
+    height: 20px;
+    position: absolute;
+    border-radius: 50%;
+    opacity: 0;
+    cursor: pointer;
+    transition: all .3s;
+}
+.left-btn{
+    background: no-repeat url(./assets/左箭头.png) center;
+    background-color: #fff;
+    top: 50%;
+    left: 5px;
+    transform: translateY(-50%);
+}
+.right-btn{
+    background: no-repeat url(./assets/右箭头.png) center;
+    background-color: #fff;
+    top: 50%;
+    right: 5px;
+    transform: translateY(-50%);
+}
+.left-btn.show{
+    opacity: .7;
+    z-index: 11;
+    left: 10px;
+}
+.right-btn.show{
+    opacity: .7;
+    z-index: 11;
+    right: 10px;
+}
+.left-btn:hover,
+.right-btn:hover{
+    width: 22px;
+    height: 22px;
+    opacity: .8;
+}
+
+.pots{
+    display: flex;
+    list-style: none;
+    width: 50%;
+    justify-content: space-evenly;
+    position: absolute;
+    bottom: 18px;
+    left: 50%;
+    transform: translateX(-50%);
+    margin: 0;
+    padding: 0;
+    z-index: 11;
+}
+
+.pots>li::before{
+    content: '';
+    display: block;
+    padding: 8px 0;
+    position: relative;
+    top:-6px;
+    left: 0;
+}
+.pots>li{
+    background-color: #fff;
+    flex-basis: 20px;
+    height: 3px;
+    border-radius: 2px;
+    cursor: pointer;
+    opacity: .8;
+    transition: all .5s;
+}
+.pots>li.active{
+    box-shadow: 0 0 2px 1px #999;
+    opacity: 1;
+    flex-basis: 16px;
+    height: 4px;
+}
