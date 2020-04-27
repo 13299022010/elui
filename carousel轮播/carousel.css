@@ -16,25 +16,22 @@
     align-items: center;
     width: 100%;
     height: 100%;
+    position: relative;
+    overflow: hidden;
 }
-.page{
+.page>img{
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    opacity: 0;
+    /* opacity: 0; */
     z-index: -1;
     cursor: auto;
-    transition: ease-in-out .5s;
 }
-.page>img{
-    width: 100%;
-    height: 100%;
-}
-.page.show{
+.page>img.show{
     z-index: 10;
-    opacity: 1;
+    /* opacity: 1; */
 }
 
 .left-btn,
@@ -64,12 +61,12 @@
 }
 .left-btn.show{
     opacity: .7;
-    z-index: 11;
+    z-index: 100;
     left: 10px;
 }
 .right-btn.show{
     opacity: .7;
-    z-index: 11;
+    z-index: 100;
     right: 10px;
 }
 .left-btn:hover,
@@ -90,7 +87,7 @@
     transform: translateX(-50%);
     margin: 0;
     padding: 0;
-    z-index: 11;
+    z-index: 100;
 }
 
 .pots>li::before{
